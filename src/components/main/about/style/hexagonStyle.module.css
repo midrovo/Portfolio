@@ -1,0 +1,77 @@
+.contenedor-relativo {
+    @apply relative flex flex-1 flex-col items-center justify-center overflow-hidden;
+    min-height: 500px;
+}
+
+.copy-hexagon {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    @apply absolute flex flex-col items-center justify-center;
+    min-width: 560px;
+    min-height: 520px;
+    animation: rotacion 40s linear infinite;
+}
+
+.hexagon {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    @apply flex flex-col items-center justify-center;
+    width: 300px;
+    height: 260px;
+}
+
+.lineas {
+    @apply absolute flex justify-between items-center;
+    top: 230px;
+    bottom: 230px;
+    width: 490px;
+    height: 60px;
+}
+
+.center {
+    @apply rotate-90;
+}
+
+.left {
+    transform: rotate(-30deg);
+}
+
+.right {
+    transform: rotate(30deg);
+}
+
+.circle {
+    @apply rounded-full flex items-center justify-center shadow-lg bg-white;
+    width: 60px;
+    height: 60px;
+}
+
+.rotate-image-0 {
+    animation: rotacion-images 17s linear infinite;
+}
+
+.rotate-image-1 {
+    transform: rotate(30deg);
+    animation: rotacion-images 17s linear infinite;
+}
+
+.rotate-image-2 {
+    transform: rotate(-30deg);
+    animation: rotacion-images 17s linear infinite;
+}
+
+@keyframes rotacion {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotacion-images {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
