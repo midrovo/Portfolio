@@ -2,7 +2,7 @@ import { Cards } from "./Cards"
 
 import spring from "@/assets/images-skills/Spring Boot.png"
 import nest from "@/assets/images-skills/NestJS.png"
-import net from "@/assets/images-skills/Next.js.png"
+import net from "@/assets/images-skills/NET.png"
 import django from "@/assets/images-skills/Django.png"
 import xpress from "@/assets/images-skills/Express.png"
 
@@ -45,8 +45,8 @@ const otros = [
 export const Skills = () => {
 
   return (
-    <div className="flex flex-col flex-wrap mb-5">
-      <div>
+    <div className="flex flex-1 flex-col flex-wrap mb-5">
+      <div className="flex min-h-20 pt-6">
         <span className="text-3xl font-bold tracking-widest">Skills</span>
       </div>
       <div className="flex flex-1 flex-col items-center justify-center min-h-screen flex-wrap">
