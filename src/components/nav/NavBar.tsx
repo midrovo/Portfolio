@@ -12,10 +12,9 @@ const itemsNav = [
 export const NavBar = () => {
 
   return (
-    <nav className="flex items-center bg-6200EA sticky top-0 z-50">
-      <div className="flex flex-wrap flex-1 items-center justify-between mx-14 my-4">
+    <nav className="flex flex-1 min-h-20 items-center bg-6200EA sticky top-0 z-50">
+      <div className="flex flex-wrap flex-1 items-center justify-between mx-14 my-4 max-md:mx-8 max-md:my-2">
         <Logo title="MGI - { DEV }"/>
-        <div className="flex-1"></div>
         <ItemBar items={ itemsNav }/>
       </div>
     </nav>

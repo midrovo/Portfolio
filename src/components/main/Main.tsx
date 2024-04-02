@@ -5,12 +5,12 @@ import { Skills } from "./skills/Skills"
 
 export const Main = () => {
   return (
-    <main className="flex flex-1 justify-center">
-      <div className="flex flex-1 flex-col m-14 flex-wrap">
+    <main className="flex justify-center">
+      <div className="flex flex-1 flex-col m-14 max-md:m-8">
         <About/>
         <Skills/>
         <Projects/>
-        <Education/>
+        {/* <Education/> */}
       </div>
     </main>
   )

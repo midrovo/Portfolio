@@ -11,11 +11,11 @@ interface NavBar {
 
 export const ItemBar = ( { items } : NavBar ) => {
   return (
-    <ul className="flex flex-1 flex-wrap justify-between">
+    <ul className="flex flex-1 flex-wrap min-w-60 justify-between max-md:py-2">
       {
         items.map(item => (
           <li key={ item.path }>
-            <Link className="font-semibold text-lg py-4" href={ item.path }>{ item.name }</Link>
+            <Link className="font-semibold text-lg max-md:text-sm" href={ item.path }>{ item.name }</Link>
           </li>
         ))
       }

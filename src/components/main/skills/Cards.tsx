@@ -7,15 +7,15 @@ interface Props {
 
 export const Cards = ({ name, imagen } : Props) => {
   return (
-    <div className="flex w-full max-w-3xl items-center justify-center flex-wrap my-5">
-        <div className="flex flex-1 min-w-72 min-h-28 justify-center items-center shadow-2xl bg-6200EA rounded-tl-3xl">
-            <span className="text-xl font-semibold">{ name }</span>
+    <div className="flex flex-1 w-3/4 min-w-60 min-h-36 my-4 max-md:min-h-24 max-md:my-3 max-md:w-full">
+        <div className="flex flex-1 max-w-350-px justify-center items-center bg-6200EA rounded-tl-3xl max-md:max-w-36">
+            <span className="text-xl font-semibold text-white max-md:text-sm">{ name }</span>
         </div>
-        <div className="flex flex-auto items-center min-h-28 justify-between flex-wrap px-5 py-4 shadow-2xl bg-white rounded-br-3xl">
+        <div className="flex flex-1 items-center justify-between flex-wrap bg-white shadow-2xl rounded-br-3xl px-6 py-5 max-md:p-3 max-md:justify-around">
             {
                 imagen.map(imagen => (
                     <Image
-                        className="p-2"
+                        className="max-md:max-w-7 max-md:max-h-7"
                         key={ imagen.src }
                         src={ imagen }
                         width={ 70 }

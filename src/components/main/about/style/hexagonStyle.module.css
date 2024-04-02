@@ -1,28 +1,36 @@
 .contenedor-relativo {
-    @apply relative flex flex-1 flex-col items-center justify-center overflow-hidden;
-    min-height: 500px;
+    @apply relative flex min-w-60 flex-col items-center overflow-hidden justify-center max-md:max-h-400-px;
+    max-width: 490px;
+    height: 480px;
+
 }
 
 .copy-hexagon {
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    @apply absolute flex flex-col items-center justify-center;
-    min-width: 560px;
-    min-height: 520px;
+    @apply absolute flex flex-1 min-w-60 flex-col items-center justify-center;
+    height: 260px;
     animation: rotacion 40s linear infinite;
+}
+
+.contenedor-hexagon {
+    @apply flex justify-center items-center max-md:max-w-200-px max-md:max-h-160-px;
+    width: 300px;
+    height: 260px;
+
 }
 
 .hexagon {
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    @apply flex flex-col items-center justify-center;
-    width: 300px;
-    height: 260px;
+    @apply flex flex-1 object-cover;
+    width: 100%;
+    height: 100%;
+
 }
 
 .lineas {
-    @apply absolute flex justify-between items-center;
-    top: 230px;
-    bottom: 230px;
-    width: 490px;
+    @apply absolute flex flex-1 justify-between items-center max-md:max-w-350-px;
+    top: 100px;
+    bottom: 100px;
+    width: 470px;
     height: 60px;
 }
 
@@ -39,9 +47,17 @@
 }
 
 .circle {
-    @apply rounded-full flex items-center justify-center shadow-lg bg-white;
+    @apply rounded-full flex items-center justify-center shadow-lg bg-white max-md:max-h-50-px max-md:max-w-50-px;
     width: 60px;
     height: 60px;
+}
+
+.rotate-image-0,
+.rotate-image-1,
+.rotate-image-2 {
+    @apply max-md:max-w-7 max-md:max-h-7;
+    width: 35px;
+    height: 35px;
 }
 
 .rotate-image-0 {

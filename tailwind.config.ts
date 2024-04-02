@@ -18,8 +18,21 @@ const config: Config = {
         "6200EA": "#6200EA"
       },
       maxWidth: {
-        "490-px": "490px"
+        "490-px": "490px",
+        "440-px": "440px",
+        "350-px": "350px",
+        "200-px": "220px",
+        "50-px": "50px",
+      },
+      maxHeight: {
+        "400-px": "400px",
+        "160-px": "180px",
+        "50-px": "50px",
+      },
+      spacing: {
+        "175": "175px",
       }
+      
     },
   },
   plugins: [],

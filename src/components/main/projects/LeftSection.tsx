@@ -43,7 +43,7 @@ export const LeftSection = () => {
     }
     
     return (
-        <div className={ style['contenedor-left'] }>
+        <div className="flex flex-1 flex-col min-w-60 rounded-b-3xl shadow-2xl">
             <div className={ style['contenedor-carrusel'] }>
                 <div ref={ carruseles } className={ `${ style.carruseles }` }>
                     
@@ -84,17 +84,23 @@ export const LeftSection = () => {
                         />
                     </section>
                 </div>
-                <div onClick={ moveToLeft } className={ style['icono-left'] }>
+                <div
+                    onClick={ moveToLeft }
+                    className="absolute px-2 flex items-center h-full left-0 hover:bg-opacity-25 hover:bg-gray-500 ease-out cursor-pointer transition-all"
+                >
                     <IoChevronBackOutline color="white" size={30}/>
                 </div>
-                <div onClick={ moveToRight } className={ style['icono-right'] }>
+                <div
+                    onClick={ moveToRight }
+                    className="absolute px-2 flex items-center h-full right-0 hover:bg-opacity-25 hover:bg-gray-500 ease-out cursor-pointer transition-all"
+                >
                     <IoChevronForwardOutline color="white" size={30}/>
                 </div>
             </div>
-            <div className={ style['contenedor-detalle'] }>
-                <div className={ style.contenido }>
-                    <span className="text-2xl font-bold mb-3">Nombre del Proyecto</span>
-                    <p className="text-lg text-justify">
+            <div className="flex flex-1 min-h-28 justify-center bg-6200EA rounded-b-3xl max-md:min-h-36">
+                <div className="flex flex-col items-center mx-8 my-4">
+                    <span className="text-2xl font-bold mb-1 max-md:text-xl">Nombre del Proyecto</span>
+                    <p className="text-lg text-justify max-md:text-sm">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Sed fermentum, tortor sit amet rhoncus malesuada,sem velit eleifend nunc,
                         vel consequat turpis enim vel nisi.
