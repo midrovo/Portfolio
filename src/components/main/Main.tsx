@@ -10,7 +10,7 @@ export const Main = () => {
         <About/>
         <Skills/>
         <Projects/>
-        {/* <Education/> */}
+        <Education/>
       </div>
     </main>
   )

@@ -47,7 +47,7 @@ export const Skills = () => {
   return (
     <div className="flex flex-1 flex-col my-7">
       <div className="flex flex-1 min-w-60 max-h-28 min-h-20">
-        <span className="text-3xl font-bold tracking-widest max-md:text-2xl">Skills</span>
+        <span className="text-3xl font-extrabold tracking-widest max-md:text-2xl">Skills</span>
       </div>
       <div className="flex flex-1 items-center flex-col flex-wrap min-w-60 my-3">
         <Cards name="B A C K E N D" imagen={ backend }/>

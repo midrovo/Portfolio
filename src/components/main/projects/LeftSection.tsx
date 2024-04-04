@@ -8,6 +8,14 @@ import p2 from "@/assets/images-projects/p2.jpg";
 import p3 from "@/assets/images-projects/p3.jpg";
 import p4 from "@/assets/images-projects/p4.jpg";
 import { useRef, useState } from "react";
+import { ImageSection } from "./ImageSection";
+
+const imagenes = [
+    { id: 1, src: p1.src },
+    { id: 2, src: p2.src },
+    { id: 3, src: p3.src },
+    { id: 4, src: p4.src },
+]
 
 export const LeftSection = () => {
     const carruseles = useRef<HTMLDivElement>(null);
@@ -43,64 +51,33 @@ export const LeftSection = () => {
     }
     
     return (
-        <div className="flex flex-1 flex-col min-w-60 rounded-b-3xl shadow-2xl">
-            <div className={ style['contenedor-carrusel'] }>
+        <div className="flex flex-1 basis-3/5 flex-col min-w-60 my-2">
+            <div className="relative flex flex-1 overflow-hidden rounded-t-3xl max-h-400-px">
                 <div ref={ carruseles } className={ `${ style.carruseles }` }>
+                    {
+                        imagenes.map(imagen => (
+                            <ImageSection key={ imagen.id } image={ imagen.src }/>
+                        ))
+                    }
                     
-                    <section className={ style['section-image'] }>
-                        <Image
-                            className={ style.imagen }
-                            src={ p1 }
-                            width={ 0 }
-                            height={ 0 }
-                            alt=""
-                        />
-                    </section>
-                    <section className={ style['section-image'] }>
-                        <Image
-                            className={ style.imagen }
-                            src={ p2 }
-                            width={ 0 }
-                            height={ 0 }
-                            alt=""
-                        />
-                    </section>
-                    <section className={ style['section-image'] }>
-                        <Image
-                            className={ style.imagen }
-                            src={ p3 }
-                            width={ 0 }
-                            height={ 0 }
-                            alt=""
-                        />
-                    </section>
-                    <section className={ style['section-image'] }>
-                        <Image
-                            className={ style.imagen }
-                            src={ p4 }
-                            width={ 0 }
-                            height={ 0 }
-                            alt=""
-                        />
-                    </section>
                 </div>
                 <div
                     onClick={ moveToLeft }
-                    className="absolute px-2 flex items-center h-full left-0 hover:bg-opacity-25 hover:bg-gray-500 ease-out cursor-pointer transition-all"
+                    className="absolute flex items-center left-0 top-0 bottom-0 px-2 hover:cursor-pointer hover:bg-gray-800 hover:bg-opacity-50"
                 >
                     <IoChevronBackOutline color="white" size={30}/>
                 </div>
                 <div
                     onClick={ moveToRight }
-                    className="absolute px-2 flex items-center h-full right-0 hover:bg-opacity-25 hover:bg-gray-500 ease-out cursor-pointer transition-all"
+                    className="absolute flex items-center right-0 top-0 bottom-0 px-2 hover:cursor-pointer hover:bg-gray-800 hover:bg-opacity-50"
                 >
                     <IoChevronForwardOutline color="white" size={30}/>
                 </div>
             </div>
-            <div className="flex flex-1 min-h-28 justify-center bg-6200EA rounded-b-3xl max-md:min-h-36">
-                <div className="flex flex-col items-center mx-8 my-4">
-                    <span className="text-2xl font-bold mb-1 max-md:text-xl">Nombre del Proyecto</span>
-                    <p className="text-lg text-justify max-md:text-sm">
+            <div className="bg-6200EA rounded-b-3xl">
+                <div className="flex flex-col items-center justify-center mx-6 my-5">
+                    <span className="text-lg font-bold tracking-widest mb-2 max-md:text-base">NOMBRE DEL PROYECTO</span>
+                    <p className="text-base font-semibold text-center max-md:text-sm max-md:font-normal">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Sed fermentum, tortor sit amet rhoncus malesuada,sem velit eleifend nunc,
                         vel consequat turpis enim vel nisi.

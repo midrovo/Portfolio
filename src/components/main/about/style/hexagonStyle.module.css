@@ -27,7 +27,7 @@
 }
 
 .lineas {
-    @apply absolute flex flex-1 justify-between items-center max-md:max-w-350-px;
+    @apply absolute flex flex-1 justify-between items-center max-md:max-w-348-px;
     top: 100px;
     bottom: 100px;
     width: 470px;
